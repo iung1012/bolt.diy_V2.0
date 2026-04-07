@@ -51,21 +51,13 @@ COPY --from=build /app/build ./build
 COPY --from=build /app/public ./public
 COPY --from=build /app/functions ./functions
 COPY --from=build /app/wrangler.toml ./wrangler.toml
+COPY start.sh ./start.sh
 
 RUN pnpm add -g wrangler && \
     mkdir -p /root/.config/.wrangler && \
-    echo '{"enabled":false}' > /root/.config/.wrangler/metrics.json
+    echo '{"enabled":false}' > /root/.config/.wrangler/metrics.json && \
+    chmod +x ./start.sh
 
 EXPOSE 8788
 
-# Startup script: build bindings from env vars and start wrangler
-CMD ["sh", "-c", "\
-  BINDINGS=''; \
-  for var in ANTHROPIC_API_KEY OPENAI_API_KEY GOOGLE_API_KEY DEEPSEEK_API_KEY XAI_API_KEY MISTRAL_API_KEY \
-             SUPABASE_URL SUPABASE_ANON_KEY SUPABASE_SERVICE_ROLE_KEY \
-             VITE_SUPABASE_URL VITE_SUPABASE_ANON_KEY VITE_LOG_LEVEL; do \
-    val=$(eval echo \"\\$$var\"); \
-    if [ -n \"$val\" ]; then BINDINGS=\"$BINDINGS --binding ${var}=${val}\"; fi; \
-  done; \
-  wrangler pages dev ./build/client $BINDINGS --port 8788 --ip 0.0.0.0 --no-show-interactive-dev-session \
-"]
+CMD ["sh", "./start.sh"]
