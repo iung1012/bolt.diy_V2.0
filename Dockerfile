@@ -24,6 +24,12 @@ RUN pnpm install --frozen-lockfile
 # ================================
 FROM base AS build
 
+# Declare build-time args so Railway passes them in during Docker build
+ARG VITE_SUPABASE_URL
+ARG VITE_SUPABASE_ANON_KEY
+ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
+ENV VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY
+
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 RUN pnpm run build
