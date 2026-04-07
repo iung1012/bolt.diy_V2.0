@@ -186,26 +186,26 @@
   }
 
   :root[data-theme='dark'] {
-    /* Modern Blue Theme - Dark Mode */
-    --background: hsl(0 0% 0%);
-    --foreground: hsl(200 6.6667% 91.1765%);
-    --card: hsl(228 9.8039% 10%);
-    --card-foreground: hsl(0 0% 85.098%);
-    --popover: hsl(0 0% 0%);
-    --popover-foreground: hsl(200 6.6667% 91.1765%);
-    --primary: hsl(203.7736 87.6033% 52.549%);
+    /* Lovable-inspired Premium Dark Theme */
+    --background: hsl(240 20% 4%);
+    --foreground: hsl(240 15% 92%);
+    --card: hsl(240 15% 7%);
+    --card-foreground: hsl(240 15% 88%);
+    --popover: hsl(240 20% 5%);
+    --popover-foreground: hsl(240 15% 92%);
+    --primary: hsl(262 83% 68%);
     --primary-foreground: hsl(0 0% 100%);
-    --secondary: hsl(195 15.3846% 94.902%);
-    --secondary-foreground: hsl(210 25% 7.8431%);
-    --muted: hsl(0 0% 9.4118%);
-    --muted-foreground: hsl(210 3.3898% 46.2745%);
-    --accent: hsl(205.7143 70% 7.8431%);
-    --accent-foreground: hsl(203.7736 87.6033% 52.549%);
-    --destructive: hsl(356.3033 90.5579% 54.3137%);
+    --secondary: hsl(240 10% 14%);
+    --secondary-foreground: hsl(240 15% 85%);
+    --muted: hsl(240 12% 10%);
+    --muted-foreground: hsl(240 8% 55%);
+    --accent: hsl(262 60% 15%);
+    --accent-foreground: hsl(262 83% 78%);
+    --destructive: hsl(0 84% 60%);
     --destructive-foreground: hsl(0 0% 100%);
-    --border: hsl(210 5.2632% 14.902%);
-    --input: hsl(207.6923 27.6596% 18.4314%);
-    --ring: hsl(202.8169 89.1213% 53.1373%);
+    --border: hsl(240 10% 14%);
+    --input: hsl(240 12% 12%);
+    --ring: hsl(262 83% 68%);
 
     --bolt-elements-borderColor: var(--border);
     --bolt-elements-borderColorActive: var(--ring);
@@ -226,16 +226,16 @@
     --bolt-elements-code-background: var(--muted);
     --bolt-elements-code-text: var(--foreground);
 
-    --bolt-elements-button-primary-background: hsl(203.7736 87.6033% 52.549% / 0.25);
-    --bolt-elements-button-primary-backgroundHover: hsl(203.7736 87.6033% 52.549% / 0.4);
+    --bolt-elements-button-primary-background: hsl(262 83% 68% / 0.2);
+    --bolt-elements-button-primary-backgroundHover: hsl(262 83% 68% / 0.35);
     --bolt-elements-button-primary-text: var(--primary);
 
-    --bolt-elements-button-secondary-background: hsl(210 5.2632% 14.902% / 0.35);
-    --bolt-elements-button-secondary-backgroundHover: hsl(210 5.2632% 14.902% / 0.55);
-    --bolt-elements-button-secondary-text: var(--secondary-foreground);
+    --bolt-elements-button-secondary-background: hsl(240 10% 14% / 0.5);
+    --bolt-elements-button-secondary-backgroundHover: hsl(240 10% 14% / 0.8);
+    --bolt-elements-button-secondary-text: var(--foreground);
 
-    --bolt-elements-button-danger-background: hsl(356.3033 90.5579% 54.3137% / 0.2);
-    --bolt-elements-button-danger-backgroundHover: hsl(356.3033 90.5579% 54.3137% / 0.35);
+    --bolt-elements-button-danger-background: hsl(0 84% 60% / 0.2);
+    --bolt-elements-button-danger-backgroundHover: hsl(0 84% 60% / 0.35);
     --bolt-elements-button-danger-text: var(--destructive);
 
     --bolt-elements-item-contentDefault: var(--muted-foreground);
@@ -243,15 +243,15 @@
     --bolt-elements-item-contentAccent: var(--primary);
     --bolt-elements-item-contentDanger: var(--destructive);
     --bolt-elements-item-backgroundDefault: transparent;
-    --bolt-elements-item-backgroundActive: hsl(210 5.2632% 14.902% / 0.45);
-    --bolt-elements-item-backgroundAccent: hsl(203.7736 87.6033% 52.549% / 0.3);
-    --bolt-elements-item-backgroundDanger: hsl(356.3033 90.5579% 54.3137% / 0.3);
+    --bolt-elements-item-backgroundActive: hsl(240 10% 14% / 0.6);
+    --bolt-elements-item-backgroundAccent: hsl(262 83% 68% / 0.2);
+    --bolt-elements-item-backgroundDanger: hsl(0 84% 60% / 0.2);
 
-    --bolt-elements-loader-background: hsl(210 5.2632% 14.902% / 0.35);
+    --bolt-elements-loader-background: hsl(240 10% 14% / 0.5);
     --bolt-elements-loader-progress: var(--primary);
 
     --bolt-elements-artifacts-background: var(--card);
-    --bolt-elements-artifacts-backgroundHover: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-artifacts-backgroundHover: hsl(240 10% 14% / 0.6);
     --bolt-elements-artifacts-borderColor: var(--border);
     --bolt-elements-artifacts-inlineCode-background: var(--muted);
     --bolt-elements-artifacts-inlineCode-text: var(--foreground);
@@ -265,29 +265,29 @@
     --bolt-elements-messages-inlineCode-background: var(--muted);
     --bolt-elements-messages-inlineCode-text: var(--foreground);
 
-    --bolt-elements-icon-success: hsl(159.7826 100% 36.0784%);
-    --bolt-elements-icon-error: hsl(356.3033 90.5579% 54.3137%);
-    --bolt-elements-icon-primary: hsl(203.7736 87.6033% 52.549%);
-    --bolt-elements-icon-secondary: hsl(210 3.3898% 46.2745%);
-    --bolt-elements-icon-tertiary: hsl(210 3.3898% 56.2745%);
+    --bolt-elements-icon-success: hsl(142 70% 50%);
+    --bolt-elements-icon-error: hsl(0 84% 60%);
+    --bolt-elements-icon-primary: hsl(262 83% 68%);
+    --bolt-elements-icon-secondary: hsl(240 8% 55%);
+    --bolt-elements-icon-tertiary: hsl(240 8% 45%);
 
     --bolt-elements-dividerColor: var(--border);
 
-    --bolt-elements-prompt-background: hsl(228 9.8039% 10% / 0.8);
+    --bolt-elements-prompt-background: hsl(240 15% 7% / 0.85);
 
-    --bolt-elements-sidebar-dropdownShadow: hsl(210 5.2632% 14.902% / 0.45);
-    --bolt-elements-sidebar-buttonBackgroundDefault: hsl(203.7736 87.6033% 52.549% / 0.3);
-    --bolt-elements-sidebar-buttonBackgroundHover: hsl(203.7736 87.6033% 52.549% / 0.45);
+    --bolt-elements-sidebar-dropdownShadow: hsl(240 20% 4% / 0.8);
+    --bolt-elements-sidebar-buttonBackgroundDefault: hsl(262 83% 68% / 0.2);
+    --bolt-elements-sidebar-buttonBackgroundHover: hsl(262 83% 68% / 0.35);
     --bolt-elements-sidebar-buttonText: var(--primary);
 
     --bolt-elements-preview-addressBar-background: var(--card);
-    --bolt-elements-preview-addressBar-backgroundHover: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-preview-addressBar-backgroundHover: hsl(240 10% 14% / 0.6);
     --bolt-elements-preview-addressBar-backgroundActive: var(--background);
     --bolt-elements-preview-addressBar-text: var(--muted-foreground);
     --bolt-elements-preview-addressBar-textActive: var(--foreground);
 
     --bolt-elements-terminals-background: var(--card);
-    --bolt-elements-terminals-buttonBackground: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-terminals-buttonBackground: hsl(240 10% 14% / 0.6);
 
     --bolt-elements-cta-background: var(--accent);
     --bolt-elements-cta-text: var(--accent-foreground);
@@ -371,16 +371,16 @@
     --bolt-elements-code-background: var(--muted);
     --bolt-elements-code-text: var(--foreground);
 
-    --bolt-elements-button-primary-background: hsl(203.7736 87.6033% 52.549% / 0.25);
-    --bolt-elements-button-primary-backgroundHover: hsl(203.7736 87.6033% 52.549% / 0.4);
+    --bolt-elements-button-primary-background: hsl(262 83% 68% / 0.2);
+    --bolt-elements-button-primary-backgroundHover: hsl(262 83% 68% / 0.35);
     --bolt-elements-button-primary-text: var(--primary);
 
-    --bolt-elements-button-secondary-background: hsl(210 5.2632% 14.902% / 0.35);
-    --bolt-elements-button-secondary-backgroundHover: hsl(210 5.2632% 14.902% / 0.55);
-    --bolt-elements-button-secondary-text: var(--secondary-foreground);
+    --bolt-elements-button-secondary-background: hsl(240 10% 14% / 0.5);
+    --bolt-elements-button-secondary-backgroundHover: hsl(240 10% 14% / 0.8);
+    --bolt-elements-button-secondary-text: var(--foreground);
 
-    --bolt-elements-button-danger-background: hsl(356.3033 90.5579% 54.3137% / 0.2);
-    --bolt-elements-button-danger-backgroundHover: hsl(356.3033 90.5579% 54.3137% / 0.35);
+    --bolt-elements-button-danger-background: hsl(0 84% 60% / 0.2);
+    --bolt-elements-button-danger-backgroundHover: hsl(0 84% 60% / 0.35);
     --bolt-elements-button-danger-text: var(--destructive);
 
     --bolt-elements-item-contentDefault: var(--muted-foreground);
@@ -388,15 +388,15 @@
     --bolt-elements-item-contentAccent: var(--primary);
     --bolt-elements-item-contentDanger: var(--destructive);
     --bolt-elements-item-backgroundDefault: transparent;
-    --bolt-elements-item-backgroundActive: hsl(210 5.2632% 14.902% / 0.45);
-    --bolt-elements-item-backgroundAccent: hsl(203.7736 87.6033% 52.549% / 0.3);
-    --bolt-elements-item-backgroundDanger: hsl(356.3033 90.5579% 54.3137% / 0.3);
+    --bolt-elements-item-backgroundActive: hsl(240 10% 14% / 0.6);
+    --bolt-elements-item-backgroundAccent: hsl(262 83% 68% / 0.2);
+    --bolt-elements-item-backgroundDanger: hsl(0 84% 60% / 0.2);
 
-    --bolt-elements-loader-background: hsl(210 5.2632% 14.902% / 0.35);
+    --bolt-elements-loader-background: hsl(240 10% 14% / 0.5);
     --bolt-elements-loader-progress: var(--primary);
 
     --bolt-elements-artifacts-background: var(--card);
-    --bolt-elements-artifacts-backgroundHover: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-artifacts-backgroundHover: hsl(240 10% 14% / 0.6);
     --bolt-elements-artifacts-borderColor: var(--border);
     --bolt-elements-artifacts-inlineCode-background: var(--muted);
     --bolt-elements-artifacts-inlineCode-text: var(--foreground);
@@ -410,29 +410,29 @@
     --bolt-elements-messages-inlineCode-background: var(--muted);
     --bolt-elements-messages-inlineCode-text: var(--foreground);
 
-    --bolt-elements-icon-success: hsl(159.7826 100% 36.0784%);
-    --bolt-elements-icon-error: hsl(356.3033 90.5579% 54.3137%);
-    --bolt-elements-icon-primary: hsl(203.7736 87.6033% 52.549%);
-    --bolt-elements-icon-secondary: hsl(210 3.3898% 46.2745%);
-    --bolt-elements-icon-tertiary: hsl(210 3.3898% 56.2745%);
+    --bolt-elements-icon-success: hsl(142 70% 50%);
+    --bolt-elements-icon-error: hsl(0 84% 60%);
+    --bolt-elements-icon-primary: hsl(262 83% 68%);
+    --bolt-elements-icon-secondary: hsl(240 8% 55%);
+    --bolt-elements-icon-tertiary: hsl(240 8% 45%);
 
     --bolt-elements-dividerColor: var(--border);
 
-    --bolt-elements-prompt-background: hsl(228 9.8039% 10% / 0.8);
+    --bolt-elements-prompt-background: hsl(240 15% 7% / 0.85);
 
-    --bolt-elements-sidebar-dropdownShadow: hsl(210 5.2632% 14.902% / 0.45);
-    --bolt-elements-sidebar-buttonBackgroundDefault: hsl(203.7736 87.6033% 52.549% / 0.3);
-    --bolt-elements-sidebar-buttonBackgroundHover: hsl(203.7736 87.6033% 52.549% / 0.45);
+    --bolt-elements-sidebar-dropdownShadow: hsl(240 20% 4% / 0.8);
+    --bolt-elements-sidebar-buttonBackgroundDefault: hsl(262 83% 68% / 0.2);
+    --bolt-elements-sidebar-buttonBackgroundHover: hsl(262 83% 68% / 0.35);
     --bolt-elements-sidebar-buttonText: var(--primary);
 
     --bolt-elements-preview-addressBar-background: var(--card);
-    --bolt-elements-preview-addressBar-backgroundHover: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-preview-addressBar-backgroundHover: hsl(240 10% 14% / 0.6);
     --bolt-elements-preview-addressBar-backgroundActive: var(--background);
     --bolt-elements-preview-addressBar-text: var(--muted-foreground);
     --bolt-elements-preview-addressBar-textActive: var(--foreground);
 
     --bolt-elements-terminals-background: var(--card);
-    --bolt-elements-terminals-buttonBackground: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-terminals-buttonBackground: hsl(240 10% 14% / 0.6);
 
     --bolt-elements-cta-background: var(--accent);
     --bolt-elements-cta-text: var(--accent-foreground);
@@ -543,12 +543,12 @@
     --bolt-elements-editor-gutter-textColor: var(--bolt-elements-textTertiary);
     --bolt-elements-editor-gutter-activeLineTextColor: var(--bolt-elements-textSecondary);
     --bolt-elements-editor-selection-inactiveBackgroundOpacity: 0.3;
-    --bolt-elements-editor-activeLineBackgroundColor: rgb(50 53 63 / 50%);
+    --bolt-elements-editor-activeLineBackgroundColor: hsl(262 30% 15% / 40%);
     --bolt-elements-editor-foldGutter-textColorHover: var(--bolt-elements-textPrimary);
-    --bolt-elements-editor-matchingBracketBackgroundColor: hsla(203.7736, 87.6033%, 52.549%, 0.3);
-    --bolt-elements-editor-tooltip-backgroundColorSelected: hsl(203.7736 87.6033% 52.549% / 0.35);
+    --bolt-elements-editor-matchingBracketBackgroundColor: hsl(262 83% 68% / 0.25);
+    --bolt-elements-editor-tooltip-backgroundColorSelected: hsl(262 83% 68% / 0.3);
     --bolt-elements-editor-search-button-backgroundColor: var(--muted);
-    --bolt-elements-editor-search-button-backgroundColorHover: hsl(210 5.2632% 14.902% / 0.45);
+    --bolt-elements-editor-search-button-backgroundColorHover: hsl(240 10% 14% / 0.6);
   }
 }
 
@@ -557,15 +557,15 @@
 @layer components {
   /* Modern Gradient Backgrounds */
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(203.8863 88.2845% 53.1373%) 0%, hsl(211.5789 51.3514% 92.7451%) 100%);
+    background: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(300 70% 65%) 100%);
   }
 
   .gradient-primary-dark {
-    background: linear-gradient(135deg, hsl(203.7736 87.6033% 52.549%) 0%, hsl(205.7143 70% 7.8431%) 100%);
+    background: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(262 60% 15%) 100%);
   }
 
   .gradient-text-primary {
-    background: linear-gradient(135deg, hsl(203.8863 88.2845% 53.1373%) 0%, hsl(159.7826 100% 36.0784%) 100%);
+    background: linear-gradient(135deg, hsl(262 83% 72%) 0%, hsl(300 80% 75%) 50%, hsl(340 90% 72%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -582,8 +582,8 @@
     position: absolute;
     inset: 0;
     border-radius: 1rem;
-    padding: 2px;
-    background: linear-gradient(135deg, hsl(203.8863 88.2845% 53.1373%), hsl(159.7826 100% 36.0784%));
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(262 83% 68%), hsl(300 80% 65%));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;

@@ -72,66 +72,73 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <motion.div
                 id="intro"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="mx-auto mt-[12vh] flex w-full max-w-4xl flex-col items-center gap-10 px-6 text-center"
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="mx-auto mt-[10vh] flex w-full max-w-3xl flex-col items-center gap-8 px-6 text-center"
               >
-                {/* Hero Badge */}
-                <AnimatedBadge variant="pulse" pulse size="md" className="animate-slideInFromBottom">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  BoltDIY V2.0
-                </AnimatedBadge>
+                {/* Badge */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.05 }}
+                  className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 text-xs font-medium text-violet-300"
+                >
+                  <Sparkles className="h-3 w-3" />
+                  Powered by 19+ AI models
+                </motion.div>
 
-                {/* Hero Content */}
-                <div className="space-y-6">
+                {/* Heading */}
+                <div className="space-y-4">
                   <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="text-4xl font-bold tracking-tight text-bolt-elements-textPrimary sm:text-5xl lg:text-6xl"
                   >
-                    Where <GradientText>ideas begin</GradientText>
-                    <br />
-                    and launch
+                    Build something{' '}
+                    <GradientText>amazing</GradientText>
                   </motion.h1>
 
                   <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mx-auto max-w-2xl text-lg text-bolt-elements-textSecondary sm:text-xl text-balance"
+                    transition={{ duration: 0.5, delay: 0.15 }}
+                    className="mx-auto max-w-xl text-base text-bolt-elements-textSecondary sm:text-lg"
                   >
-                    Design, develop, and deploy in one canvas. Craft a prompt, hand off tasks to AI, and iterate
-                    together in real time with BoltDIY V2.0.
+                    Describe your idea and watch it come to life. Full-stack apps, from prompt to deployment.
                   </motion.p>
                 </div>
 
-                {/* Feature Cards Grid */}
-                <div className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {/* Feature Cards */}
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="grid w-full gap-3 sm:grid-cols-3"
+                >
                   <FeatureCard
                     icon={Zap}
-                    title="Instant Previews"
-                    description="See every change in real-time without leaving the chat. Deploy with a single command."
+                    title="Live Preview"
+                    description="See changes instantly in a real browser environment."
                     gradient
-                    delay={0.3}
+                    delay={0}
                   />
                   <FeatureCard
                     icon={Code2}
-                    title="Smart Context"
-                    description="BoltDIY remembers your project, tracks files, and suggests next steps intelligently."
+                    title="Full Stack"
+                    description="Frontend, backend, database — all in one conversation."
                     gradient
-                    delay={0.4}
+                    delay={0}
                   />
                   <FeatureCard
                     icon={Rocket}
-                    title="Ship Faster"
-                    description="From idea to deployment in minutes. AI handles the heavy lifting while you focus on creativity."
+                    title="One-click Deploy"
+                    description="From idea to production in minutes, not hours."
                     gradient
-                    delay={0.5}
-                    className="sm:col-span-2 lg:col-span-1"
+                    delay={0}
                   />
-                </div>
+                </motion.div>
               </motion.div>
             )}
             <div
@@ -163,10 +170,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                   'sticky bottom-0': chatStarted,
                 })}
               >
-                <div className="rounded-3xl border border-bolt-elements-borderColor/70 bg-bolt-elements-background-depth-1/90 shadow-lg backdrop-blur-xl">
+                <div className="rounded-2xl border border-bolt-elements-borderColor/50 bg-bolt-elements-background-depth-2/95 shadow-xl shadow-black/20 backdrop-blur-xl ring-1 ring-inset ring-white/[0.04]">
                   <textarea
                     ref={textareaRef}
-                    className="w-full resize-none rounded-3xl border-none bg-transparent px-5 pb-5 pt-5 text-base text-bolt-elements-textPrimary outline-none placeholder:text-bolt-elements-textTertiary"
+                    className="w-full resize-none rounded-2xl border-none bg-transparent px-5 pb-3 pt-4 text-sm text-bolt-elements-textPrimary outline-none placeholder:text-bolt-elements-textTertiary leading-relaxed"
                     onKeyDown={(event) => {
                       if (event.key === 'Enter') {
                         if (event.shiftKey) {
