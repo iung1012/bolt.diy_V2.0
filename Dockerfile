@@ -49,8 +49,8 @@ RUN pnpm install --prod --frozen-lockfile
 
 COPY --from=build /app/build ./build
 COPY --from=build /app/public ./public
+COPY --from=build /app/functions ./functions
 COPY --from=build /app/wrangler.toml ./wrangler.toml
-COPY --from=build /app/bindings.sh ./bindings.sh
 
 RUN pnpm add -g wrangler && \
     mkdir -p /root/.config/.wrangler && \
@@ -58,7 +58,14 @@ RUN pnpm add -g wrangler && \
 
 EXPOSE 8788
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:8788', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
-
-CMD ["sh", "-c", "wrangler pages dev ./build/client --port 8788 --ip 0.0.0.0 --no-show-interactive-dev-session"]
+# Startup script: build bindings from env vars and start wrangler
+CMD ["sh", "-c", "\
+  BINDINGS=''; \
+  for var in ANTHROPIC_API_KEY OPENAI_API_KEY GOOGLE_API_KEY DEEPSEEK_API_KEY XAI_API_KEY MISTRAL_API_KEY \
+             SUPABASE_URL SUPABASE_ANON_KEY SUPABASE_SERVICE_ROLE_KEY \
+             VITE_SUPABASE_URL VITE_SUPABASE_ANON_KEY VITE_LOG_LEVEL; do \
+    val=$(eval echo \"\\$$var\"); \
+    if [ -n \"$val\" ]; then BINDINGS=\"$BINDINGS --binding ${var}=${val}\"; fi; \
+  done; \
+  wrangler pages dev ./build/client $BINDINGS --port 8788 --ip 0.0.0.0 --no-show-interactive-dev-session \
+"]
