@@ -6,6 +6,7 @@
 FROM node:20-slim AS base
 
 ENV PNPM_VERSION=10.18.0
+ENV PNPM_HOME=/usr/local/bin
 RUN npm install -g pnpm@${PNPM_VERSION}
 
 WORKDIR /app
