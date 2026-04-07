@@ -45,7 +45,7 @@ CMD ["pnpm", "run", "dev", "--host", "0.0.0.0"]
 FROM base AS production
 
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --prod --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 COPY --from=build /app/build ./build
 COPY --from=build /app/public ./public
